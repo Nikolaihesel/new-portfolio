@@ -10,7 +10,7 @@
                     <ul id="menu-items" v-if="showNavMenu">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#">About</a></li>
-                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#">contact</a></li>
                     </ul>
                 </div>
@@ -155,12 +155,12 @@ window.onscroll = function() {hideNav()};
 
 function hideNav() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-   nav.style.opacity = "0";
-   topNav.style.opacity="1"
+   nav.style.display = "none";
+   topNav.style.display="flex"
   } else {
-   nav.style.opacity="1";
-   topNav.style.opacity="0"
-   menu.style.opacity="0"
+   nav.style.display="flex";
+   topNav.style.display="none"
+   menu.style.display="none"
   }
 }
 window.onload = hideNav();

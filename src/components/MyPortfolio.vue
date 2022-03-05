@@ -2,7 +2,7 @@
     <section>
 
 
-        <div class="portfolio-container">
+        <div class="portfolio-container" id="portfolio">
 
             <div class="portfolio-content">
 
