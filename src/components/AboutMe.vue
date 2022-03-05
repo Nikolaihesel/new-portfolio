@@ -4,7 +4,7 @@
 
         <div class="about-me-container" id="about-me-section">
             <div class="about-me-content">
-                <h2>About me</h2>
+                <h2>About me <font-awesome-icon icon="fa-solid fa-user-secret" /> </h2>
                 <p>
                     Hello There! <br>
                     I'm Nikolai - a 25 year old MultiMediaDesign student based in Odense.

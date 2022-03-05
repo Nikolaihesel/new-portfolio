@@ -6,12 +6,12 @@
 
             <div class="top-nav-container">
 
-                <div class="menu-points" >
-                    <ul id="menu-items" v-if="showNavMenu">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#">contact</a></li>
+                <div class="menu-points" id="menuPoints" >
+                    <ul id="menu-items" v-if="showNavMenu" @click="toggleTopNav">
+                        <li id="close-menu"><a href="#home">Home</a></li>
+                        <li id="close-menu"><a href="#">About</a></li>
+                        <li id="close-menu"><a href="#portfolio">Portfolio</a></li>
+                        <li id="close-menu"><a href="#">contact</a></li>
                     </ul>
                 </div>
                 <div class="burger" id="top-nav" @click="toggleTopNav">
@@ -26,16 +26,16 @@
 
             <div class="side-nav" id="nav">
                 <ul>
-                    <li id="menu-item"> <i class="fas fa-home"></i>
+                    <li id="menu-item"> <fa icon="home" />
                         <p id="nav-text"> Home </p>
                     </li>
-                    <li id="menu-item"><i class="fas fa-info"></i>
+                    <li id="menu-item"><fa icon="info" />
                         <p id="nav-text">About</p>
                     </li>
-                    <li id="menu-item"><i class="fas fa-phone"></i>
+                    <li id="menu-item"><fa icon="phone" />
                         <p id="nav-text">Contact</p>
                     </li>
-                    <li id="menu-item"><i class="fas fa-image"></i>
+                    <li id="menu-item"><fa icon="image" />
                         <p id="nav-text">Portfolio</p>
                     </li>
                 </ul>
@@ -52,30 +52,31 @@
                         class="span-name">H</span>esel
                 </h1>
 
-                <p class="text-enlarge-background slide-in-left" id="turn-text">Code <i id="turn-icon"
-                        class="fa-solid fa-xmark rotate-45deg"></i>
+                <p class="text-enlarge-background slide-in-left" id="turn-text">Code 
+                 
+                   <fa class="rotate-45deg" id="turn-icon" icon="xmark"  />
                     Design </p>
 
             </div>
             <div class="icon-container slide-in-left">
 
                 <div class="background-icon">
-                    <i class="some-icon-top fa-brands fa-instagram fa-2xl"></i>
+                    <fa class="some-icon-top" :style="{color: 'hsl(61, 89%, 58%)', height: '2em'}" :icon="['fab','instagram']" />
                 </div>
                 <div class="background-icon">
-                    <i class="some-icon-top fa-brands fa-github-alt fa-2xl"></i>
-                </div>
-
-                <div class="background-icon">
-                    <i class="some-icon-top fa-brands fa-facebook fa-2xl"></i>
+                    <fa class="some-icon-top" :style="{color: 'hsl(61, 89%, 58%)', height: '2em'}"  :icon="['fab','github']" />
                 </div>
 
                 <div class="background-icon">
-                    <i class="some-icon-top fa-brands fa-linkedin fa-2xl"></i>
+                    <fa class="some-icon-top" :style="{color: 'hsl(61, 89%, 58%)', height: '2em'}" :icon="['fab','facebook']" />
                 </div>
 
                 <div class="background-icon">
-                    <a href="mailto:nikolaihesel@icloud.com"> <i class="some-icon-top fa-solid fa-at fa-2xl"> </i></a>
+                    <fa class="some-icon-top" :style="{color: 'hsl(61, 89%, 58%)', height: '2em'}" :icon="['fab','linkedin']" />
+                </div>
+
+                <div class="background-icon">
+                    <a href="mailto:nikolaihesel@icloud.com"> <fa class="some-icon-top" :style="{color: 'hsl(61, 89%, 58%)', height: '2em'}" icon="at" /> </a>
                 </div>
             </div>
         </div>
@@ -106,6 +107,7 @@ const topNav = document.getElementById('top-nav');
 const menu = document.getElementById('menu-items');
 const burger = document.querySelectorAll('.line');
 
+
 topNav.addEventListener('mouseover', () => {
     burger.forEach(line => {
     line.style.background = "#272727";
@@ -119,6 +121,7 @@ topNav.addEventListener('mouseout', () => {
 
 });
 });
+
 
 
 
@@ -152,20 +155,31 @@ nav.addEventListener('mouseout', function handleMouseOut(){
 
 //onscroll events her 
 window.onscroll = function() {hideNav()};
+let menuPoints = document.querySelectorAll('#close-menu')
 
 function hideNav() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
    nav.style.display = "none";
-   topNav.style.display="flex"
+   topNav.style.display="flex";
+   menu.style.display="flex";
+    
+  
   } else {
    nav.style.display="flex";
-   topNav.style.display="none"
-   menu.style.display="none"
+   topNav.style.display="none";
+   menu.style.display="none";
+
+   
+   menuPoints.foreach(  (e) => {
+       e.style.display="none"
+   });
+   
   }
 }
 window.onload = hideNav();
 
 window.onscroll
+
 
     },
 

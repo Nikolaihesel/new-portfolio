@@ -8,9 +8,9 @@
 
 <script>
 
-import MyHeader from './components/MyHeader.vue'
 import AboutMe from './components/AboutMe.vue'
 import MyPortfolio from './components/MyPortfolio.vue'
+import MyHeader from './components/MyHeader.vue'
 
 export default {
   name: 'App',
@@ -18,7 +18,6 @@ export default {
     MyHeader,
     AboutMe,
     MyPortfolio
-
   }
 }
 </script>
