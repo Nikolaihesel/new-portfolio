@@ -1,0 +1,642 @@
+@import url('https://fonts.googleapis.com/css2?family=Monda:wght@400;700&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&display=swap');
+
+$black: #272727;
+$darkblack:#0c0c0c;
+$white: #f2f3f7;
+$whiteopc: #f2f3f7d0;
+$whiteopc50: #f2f3f77e;
+$opc100: #f2f3f700;
+$red: #df3636;
+$yellow: hsl(61, 89%, 58%);
+
+$font-size-p: 1rem;
+$font-size-h1-2: 2rem;
+$font-size-h3-4: 1.3rem;
+
+$ff-prim:'Poppins', sans-serif;
+$ff-sec: 'Oswald', sans-serif;
+
+$fw-bold: 700;
+$fw-semi-bold: 500;
+$fw-semi-light: 450;
+$fw-reg: 400;
+$fw-light: 200;
+
+
+ h1{
+     font-family: $ff-prim;
+     font-size: $font-size-h1-2;
+     color: $black;
+     font-weight: $fw-bold
+ }
+ h2{
+     font-family: $ff-prim;
+     font-size: $font-size-h1-2;
+     color: $black;
+     font-weight: $fw-bold
+ }
+
+ h3{
+     font-family: $ff-prim;
+     font-size: $font-size-h3-4;
+     color: $black;
+     font-weight: $fw-semi-bold
+ }
+
+ h3{
+     font-family: $ff-prim;
+     font-size: $font-size-h3-4;
+     color: $black;
+     font-weight: $fw-semi-bold
+ }
+
+ h4{
+     font-family: $ff-prim;
+     font-size: $font-size-h3-4;
+     color: $black;
+     font-weight: $fw-semi-light;
+ }
+
+ p{
+     font-family: $ff-prim;
+     font-size: $font-size-p;
+     color: $black;
+     font-weight: $fw-reg;
+ }
+
+ a{
+    font-family: $ff-prim;
+    font-size: $font-size-p;
+    color: $black;
+    font-weight: $fw-reg;
+ }
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html{
+    min-height: 100%;
+}
+
+body {
+    scroll-behavior: smooth;
+    background: linear-gradient(270deg, rgb(22, 22, 22) 0%, rgba(13,14,15,1) 100%);
+}
+
+
+.active {
+    display: block;
+}
+nav {
+//top nav starter her
+.top-nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+
+
+
+
+.burger {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    background:$black;
+    border-radius: 50%;
+    z-index: 1;
+    cursor: pointer;
+    transition: .25s ease-in;
+    border: solid 1px $red;
+
+
+}
+
+.burger:hover {
+    background: $white;
+}
+
+
+    .line {
+        margin-left: 30%;
+        margin-top: .1em;
+        margin-bottom: .1em;
+        width: 20px;
+        height: 3px;
+        background: $white;
+        transition: .25s ease-in;
+        
+    }
+    
+
+    #line2{
+        width: 15px
+    }
+
+    #line3 {
+        width: 12px;
+    }
+
+   
+}
+
+
+
+
+
+
+
+.menu-points {
+    
+
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background: $yellow;
+        border-radius: 4px;
+        transform: translateX(10px);
+        z-index: 0;
+        transform-origin: left;
+        transition: .1s ease-in;
+        font-size: 1.2rem;
+
+
+        li{
+            list-style: none;
+            margin: 0em 1em;
+            
+
+            a{
+                text-decoration: none;
+                color: #272727;
+                font-weight: $fw-semi-bold;
+                font-size: $font-size-h3-4;
+
+
+            }
+        }
+    }
+}
+
+//side-nav starter her 
+
+
+.side-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    top: 25%;
+    background: #272727;
+    border-radius: 12px;
+    margin: 1em;
+    width: 2em;
+
+
+
+
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+    }
+    li{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1em 0em;
+        padding: .5em;
+        color: $yellow;
+        border-radius: 8px;
+        transition: .10s ease-in-out;
+        cursor: pointer;
+  
+    }
+
+    li:hover{
+        background:$darkblack;
+        color: $white;
+        display: flex;
+    }
+    
+  
+
+
+    #nav-text{
+        opacity: 0;
+        transition: .15s ease-in;
+        font-size: .8rem;
+        white-space: none;
+        color: $white;
+
+    }
+   
+   
+
+.nav-icon {
+    height: 24px;
+}
+}
+
+
+}
+
+.logo-watermark{       
+     position: absolute;
+     width: 50%;
+     top: 10%;
+     right: 5%;
+     z-index: -1;
+     filter: invert(.5%) sepia(1%) saturate(4420%) hue-rotate(202deg) brightness(118%) contrast(91%);
+
+}
+
+// Content starter her 
+
+.top-container-about {
+    display: flex;
+    flex-direction: column;
+    margin: 6em;
+
+   p{
+       font-size: 3rem;
+       color:  $whiteopc;
+       font-family: $ff-sec;
+   }
+
+    .header-name{
+        font-family: $ff-sec;
+        font-size: 8rem;
+        color: $whiteopc;
+        font-weight: 400;
+        letter-spacing: -10px;
+
+        .span-name {
+            color: $yellow;
+        }
+    }
+
+    i {
+        color: $yellow ;
+        transition: .15s cubic-bezier(0,.61,1,.47);
+
+    }
+
+
+    .text-enlarge-background{
+        transition: .15s cubic-bezier(0,.61,1,.47);
+        width: 50%;
+        transform-origin: left;
+
+    }
+
+    .text-enlarge-background:hover {
+        transform: scale(1.2);
+        
+    }
+
+    .icon-container {
+        margin: 1em;
+        display: flex;
+
+        .some-icon-top {
+            cursor: pointer;
+            transition: .15s cubic-bezier(0,.61,1,.47);
+            
+        }
+
+        .background-icon{
+            margin: 1em;
+            height: 50px;
+            width: 50px;
+            background: $opc100;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .25s cubic-bezier(50,.61,1,.47);
+        }
+
+        .background-icon:hover{
+            background: $whiteopc50;
+        }
+        
+    
+       
+    }
+    
+
+}
+
+
+.about-me-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0;
+   
+
+.about-me-content{
+    display: flex;
+    flex-direction: column;
+    max-width: 65ch;
+    margin-left: 7em;
+    border-left: solid 2px $yellow;
+    padding: 1em;
+   
+    h2{
+        color: $whiteopc
+    }
+
+    p{
+        color:  $white;
+        margin: 1em 0;
+    }
+}
+
+.real-duck-img {
+    height: 60em;
+}
+}
+
+
+.portfolio-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+
+    .portfolio-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h2{
+            color: $whiteopc;
+        }
+
+        p{
+            max-width: 70ch;
+            color: $white;
+            margin: 2em;
+
+        }
+
+        
+        
+        
+    }
+}
+
+
+.section-shift-yellow{
+    width: 80%;
+    border: none;
+    height: 3px;
+    background: $yellow;
+    border-radius: 50%;
+    //filter: blur(2px);
+}
+
+.skills-container{
+
+    .sub-head-portfolio {
+        color: $whiteopc;
+        margin: 2em;
+        margin-left: 5em;
+    }
+    
+.beam-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    .beam{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background: linear-gradient( 270deg, #070707, #161616);
+        width: 25%;
+        border-radius: 12px;
+        margin: 2em;
+        transition: .15s cubic-bezier(50,.61,1,.47);
+        transform-origin: left;
+        cursor: pointer;
+
+        h3{
+            color: $white;
+        }
+        
+        .beam-logo{
+
+            width: 3em;
+            height: 3em;
+            margin: .2em;
+            
+        }
+    }
+  }
+}
+
+
+ //Alot of hovers comming up
+
+ #illustrator:hover{
+    background: #330000;
+}
+
+#photoshop:hover{
+    background: #001E36;
+}
+
+#xd:hover {
+    background: #470137;
+}
+
+#procreate:hover {
+    background: #242424;
+}
+
+#animate:hover {
+    background: #00005B;
+}
+
+#aftereffects:hover {
+    background: #00005B;
+}
+
+#vscode:hover {
+    background: #0389D2;
+}
+
+#html-logo:hover{
+    background: #E64D1F;
+}
+
+#css:hover{
+    background: #264DE4;
+}
+
+#js-logo:hover{
+    background: rgb(247,224,23);
+}
+
+#wordpress:hover{
+    background: rgb(36,139,253);
+}
+
+#scss-logo:hover {
+    background: rgb(247, 123, 185)
+}
+
+
+
+
+.container-skills-about-modal{
+   
+
+    .background-blur {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        background: #272727bd;
+        filter: blur(10px);
+        display: none;
+    }
+
+
+    .skills-about-modal {
+    position: fixed;
+    top: 10%;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
+    overflow: auto;
+    background: $darkblack;
+    border-radius: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    display: none;
+    
+
+    h4 {
+        color: $white;
+        margin-left: 2rem;
+    }
+
+    p {
+        max-width: 60ch;
+        margin: 2rem;
+        color: $whiteopc;
+    }
+
+    .top-container-modal-skills{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        max-width: 100%;
+        margin: 2em;
+
+        h3 {
+            color:  $white;
+            margin-left: 1em;
+            font-size: 4rem;
+        }
+
+        img{
+            height: 10em;
+        }
+
+        i{
+            color: $white;
+            position: absolute;
+            top: 10%;
+            right: 5%;
+            transform: scale(1.4);
+            cursor: pointer;
+            
+        }
+
+        i:hover {
+            opacity: .3;
+        }
+
+
+    }
+        
+        
+}
+
+}
+
+
+
+// portfolio cards starts here
+
+.portfolio-card-container{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    #card2{
+        display: none;
+    }
+
+    .portfolio-card {
+        margin-top: 3em;
+        height: 100vh;
+        width: 100vw;
+        background-image: linear-gradient( 109.6deg,  #131313, rgb(5, 17, 49) 91.1% );
+
+
+    h2, h3{
+        color: $white;
+        margin: 1rem;
+        font-size: $font-size-h1-2;
+            font-family: $ff-sec;
+    }
+
+    .portfolio-description-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 5em;
+
+        p {
+            color: $white;
+            max-width: 50ch;
+            margin: 1em;
+            font-size: 1.2rem;
+            line-height: 2.2rem;
+        }
+
+        img {
+            width: 25em;
+           }
+        }
+    }
+}
+
