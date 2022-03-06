@@ -17,7 +17,6 @@
 
                 </p>
             </div>
-            <hr class="section-shift-yellow">
 
 
 
@@ -27,42 +26,42 @@
 
                 <div class="beam-container">
 
-                    <div class="beam" id="illustrator">
+                    <div class="beam" id="illustrator" @click="toggleModal">
                         <div class="background-beam-icon">
                             <img class="beam-logo" src="@/assets/img/illustrator.svg" alt="">
                         </div>
                         <h3>Adobe Illustrator</h3>
                     </div>
 
-                    <div class="beam" id="photoshop">
+                    <div class="beam" id="photoshop" @click="toggleModal">
                         <div class="background-beam-icon">
                             <img class="beam-logo" src="@/assets/img/photoshop.svg" alt="">
                         </div>
                         <h3>Adobe Photoshop</h3>
                     </div>
 
-                    <div class="beam" id="xd">
+                    <div class="beam" id="xd" @click="toggleModal">
                         <div class="background-beam-icon">
                             <img class="beam-logo" src="@/assets/img/xd.svg" alt="">
                         </div>
                         <h3>Adobe XD</h3>
                     </div>
 
-                    <div class="beam" id="animate">
-                        <div class="background-beam-icon">
+                    <div class="beam" id="animate" @click="toggleModal">
+                        <div class="background-beam-icon" >
                             <img class="beam-logo" src="@/assets/img/animate.svg" alt="">
                         </div>
                         <h3>Adobe Animate</h3>
                     </div>
 
-                    <div href="google.dk" class="beam" id="procreate">
+                    <div href="google.dk" class="beam" id="procreate" @click="toggleModal">
                         <div class="background-beam-icon">
                             <img class="beam-logo" src="@/assets/img/procreate.png" alt="">
                         </div>
                         <h3>Procreate</h3>
                     </div>
 
-                    <div class="beam" id="aftereffects">
+                    <div class="beam" id="aftereffects" @click="toggleModal">
                         <div class="background-beam-icon">
                             <img class="beam-logo" src="@/assets/img/after-effects.svg" alt="">
                         </div>
@@ -79,64 +78,94 @@
         </div>
 
 
-        <div class="skills-container dev-skills">
+        <div class="skills-container dev-skills" >
 
             <h4 class="sub-head-portfolio"> Development</h4>
 
             <div class="beam-container">
 
-                <div class="beam" id="vscode">
+                <div class="beam" id="vscode" @click="toggleModal">
                     <div class="background-beam-icon">
                         <img class="beam-logo" src="@/assets/img/vscode.png" alt="">
                     </div>
                     <h3>Visual Studio Code</h3>
                 </div>
 
-                <div class="beam" id="html-logo">
+                <div class="beam" id="html-logo" @click="toggleModal">
                     <div class="background-beam-icon">
                         <img class="beam-logo" src="@/assets/img/html-logo.png" alt="">
                     </div>
                     <h3>HTML 5</h3>
                 </div>
 
-                <div class="beam" id="css">
+                <div class="beam" id="css" @click="toggleModal">
                     <div class="background-beam-icon">
                         <img class="beam-logo" src="@/assets/img/css.logo.png" alt="">
                     </div>
                     <h3>CSS 3</h3>
                 </div>
 
-                <div class="beam" id="js-logo">
+                <div class="beam" id="js-logo" @click="toggleModal">
                     <div class="background-beam-icon">
-                        <img class="beam-logo" src="@/assets/img/js-logo.png" alt="">
+                        <img class="beam-logo" src="@/assets/img/js-logo.png" alt="" >
                     </div>
                     <h3>Javascript</h3>
                 </div>
 
-                <div href="google.dk" class="beam" id="wordpress">
+                <div href="google.dk" class="beam" id="wordpress" @click="toggleModal">
                     <div class="background-beam-icon">
                         <img class="beam-logo" src="@/assets/img/wordpress-logo.png" alt="">
                     </div>
                     <h3>Wordpress & Theme Dev</h3>
                 </div>
 
-                <div href="google.dk" class="beam" id="scss-logo">
+                <div href="google.dk" class="beam" id="scss-logo" @click="toggleModal" >
                     <div class="background-beam-icon">
                         <img class="beam-logo" src="@/assets/img/scss-logo.png" alt="">
                     </div>
                     <h3>SCSS</h3>
                 </div>
-                <hr class="section-shift-red">
+               
             </div>
 
         </div>
 
+
+       
+
     </section>
+
+     <div v-if="showModal" class="backdrop"  @click.self="toggleModal">
+            <div class="modal">
+                <div class="top-container-modal-skills">
+
+                 <h1>
+                    Test test test
+                </h1>
+                               </div>
+
+            </div>
+        </div>
 
 </template>
 
 <script>
 export default {
-    name: 'MyPortfolio'
+    name: 'MyPortfolio',
+
+data()  {
+
+return{
+    showModal: 0
+    
+}
+},
+
+methods: {
+    toggleModal()  {
+        this.showModal = !this.showModal;
+    }
+}
+
 }
 </script>
